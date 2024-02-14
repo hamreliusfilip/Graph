@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star Wars Interactions</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="controlpanel.js"></script>
+    <script src="chart.js"></script>
+</head>
+
+<body>
+    <div id="content">
+
+        <div class="Container">
+            <div class="chart_one">
+                <h1> Graph 1 - Episode 1</h1>
+                <svg width="800" height="500"> 
+                    <g class="links"></g>
+                    <g class="nodes"></g>
+                </svg>
+            </div>
+            <div class="chart_two">
+                <h1> Graph 2 - Episode 2</h1>
+                <svg width="800" height="500"> 
+                    <g class="links"></g>
+                    <g class="nodes"></g>
+                </svg>
+            </div>
+        </div>
+
+        <div class = "ControlPanel"> 
+            <div> 
+                <h2> Choose a movie set for chart one </h2>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-1-interactions-allCharacters.json', 200, 200, [300, 300])">THE PHANTOM MENACE</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-2-interactions-allCharacters.json', 200, 200, [300, 300])">ATTACK OF THE CLONES</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-3-interactions-allCharacters.json', 200, 200, [300, 300])">REVENGE OF THE SITH</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-4-interactions-allCharacters.json', 200, 200, [300, 300])">A NEW HOPE</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-5-interactions-allCharacters.json', 200, 200, [300, 300])">THE EMPIRE STRIKES BACK</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-6-interactions-allCharacters.json', 200, 200, [300, 300])">RETURN OF THE JEDI</button>
+                <button onclick="updateChart('.chart_one', 'starwars-episode-7-interactions-allCharacters.json', 200, 200, [300, 300])">THE FORCE AWAKENS</button>
+                <button onclick="updateChart('.chart_one', 'starwars-full-interactions-allCharacters.json', 200, 200, [300, 300])">ALL CONNECTIONS</button>
+            </div>
+
+            <div> 
+                <h2> Choose a movie set for chart two </h2>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-1-interactions-allCharacters.json', 200, 200, [300, 300])">THE PHANTOM MENACE</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-2-interactions-allCharacters.json', 200, 200, [300, 300])">ATTACK OF THE CLONES</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-3-interactions-allCharacters.json', 200, 200, [300, 300])">REVENGE OF THE SITH</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-4-interactions-allCharacters.json', 200, 200, [300, 300])">A NEW HOPE</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-5-interactions-allCharacters.json', 200, 200, [300, 300])">THE EMPIRE STRIKES BACK</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-6-interactions-allCharacters.json', 200, 200, [300, 300])">RETURN OF THE JEDI</button>
+                <button onclick="updateChart('.chart_two', 'starwars-episode-7-interactions-allCharacters.json', 200, 200, [300, 300])">THE FORCE AWAKENS</button>
+                <button onclick="updateChart('.chart_two', 'starwars-full-interactions-allCharacters.json', 200, 200, [300, 300])">ALL CONNECTIONS</button>
+            </div>
+
+            <div class="slider-container">
+                <label for="chargeSlider">Charge Strength:</label>
+                <input type="range" min="-500" max="0" value="-150" class="slider" id="chargeSlider">
+                <span id="chargeValue">-150</span>
+            </div>
+            
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
