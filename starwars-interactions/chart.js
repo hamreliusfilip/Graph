@@ -19,7 +19,7 @@ function createChart(chartSelector, dataURL, width, height, centerPos) {
             .on('tick', ticked);
 
         function updateLinks() {
-            var u = d3.select(chartSelector + ' .links')
+            d3.select(chartSelector + ' .links')
                 .selectAll('line')
                 .data(links)
                 .join('line')

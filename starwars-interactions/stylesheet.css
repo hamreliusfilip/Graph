@@ -1,11 +1,11 @@
-/* Stylesheet.css */
 
-
-.chart_one circle{ 
-    fill: blue;
-}
+.chart_one circle,
 .chart_two circle {
-    fill: red;
+    fill: blue; 
+}
+
+.chart_two circle {
+    fill: red; 
 }
 
 .chart_one line,
@@ -13,39 +13,38 @@
     stroke: black;
 }
 
-.chart_one text{ 
-    text-anchor: middle;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    fill: white;
-    font-size: 16px;
-
-}
+.chart_one text,
 .chart_two text {
     text-anchor: middle;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    fill: black;
     font-size: 16px;
 }
 
-.chart_one { 
-    stroke: white;
+.chart_one text {
+    fill: white;
 }
 
-.chart_two { 
-    stroke: black;
-}
-
-.Container {
-    display: flex; 
+.chart_two text {
+    fill: black;
 }
 
 .chart_one,
 .chart_two {
-    flex: 1; 
-    margin: 20px; 
+    stroke: white;
 }
 
-h1{ 
+.Container {
+    display: flex;
+}
+
+.chart_one,
+.chart_two {
+    flex: 1;
+    margin: 20px;
+    stroke: white;
+}
+
+h1 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 50px;
     font-weight: bold;
@@ -59,18 +58,14 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 20px;
+    flex-direction: column; 
 }
 
-h2{ 
+h2 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
     margin: 20px;
-}
-
-.ControlPanel {
-    display: flex;
-    flex-direction: column;
 }
 
 .ControlPanel > div {
@@ -86,33 +81,33 @@ h2{
 }
 
 button {
-  color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 12px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  cursor: pointer;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 12px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
 button:hover {
-  border: 1px solid white;
+    border: 1px solid white;
 }
 
 button:active {
-  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+    box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
 }
-  
+
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;
     appearance: none;
-    width: 100%; /* Full-width */
-    height: 25px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
     transition: opacity .2s;
-  }
+}
