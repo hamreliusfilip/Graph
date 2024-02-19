@@ -1,7 +1,7 @@
 
 .chart_one circle,
 .chart_two circle {
-    fill: blue; 
+    fill: dodgerblue; 
 }
 
 .chart_two circle {
@@ -20,17 +20,13 @@
     font-size: 16px;
 }
 
+.chart_two text,
 .chart_one text {
-    fill: white;
-}
-
-.chart_two text {
     fill: black;
-}
-
-.chart_one,
-.chart_two {
-    stroke: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
 }
 
 .Container {
@@ -41,7 +37,6 @@
 .chart_two {
     flex: 1;
     margin: 20px;
-    stroke: white;
 }
 
 h1 {
@@ -65,11 +60,11 @@ h2 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    margin: 20px;
 }
 
-.ControlPanel > div {
+.ControlPanel {
     margin-bottom: 20px;
+    margin-top: -50px
 }
 
 .ControlPanel h2 {
@@ -81,39 +76,63 @@ h2 {
 }
 
 button {
-    color: #090909;
-    padding: 0.7em 1.7em;
-    font-size: 12px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    cursor: pointer;
-    border: 1px solid #e8e8e8;
-    transition: all 0.3s;
-    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-}
-
-button:hover {
-    border: 1px solid white;
-}
-
-button:active {
-    box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
-}
+    font-size: 13px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+    padding: 0.2em 2em;
+    border: transparent;
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
 
 .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    background: dodgerblue;
+    border-radius: 4px;
+    padding: 0.2em 2em;
+    border: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 label {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.slider-container label {
+    margin: 50px;
+}
+
+span{ 
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
 }
