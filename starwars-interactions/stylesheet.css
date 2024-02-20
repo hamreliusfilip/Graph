@@ -1,36 +1,37 @@
 
-.chart_one circle,
-.chart_two circle {
+.chart_one circle{
     fill: dodgerblue; 
 }
 
 .chart_two circle {
-    fill: red; 
+    fill: darkcyan; 
 }
 
 .chart_one line,
 .chart_two line {
-    stroke: black;
+    stroke: lightgrey;
 }
 
 .chart_one text,
 .chart_two text {
     text-anchor: middle;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .chart_two text,
 .chart_one text {
     fill: black;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin: 20px;
 }
 
 .Container {
     display: flex;
+    margin-bottom: -100px;
 }
 
 .chart_one,
@@ -41,14 +42,12 @@
 
 h1 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 15px;
     font-weight: bold;
     margin: 20px;
 }
 
 .ControlPanel {
-    margin-top: 0;
-    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,12 +57,12 @@ h1 {
 
 h2 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .ControlPanel {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: -50px
 }
 
@@ -97,18 +96,19 @@ button {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 25px;
+    height: 15px;
     background: dodgerblue;
     border-radius: 4px;
-    padding: 0.2em 2em;
+    padding:  0.2em 2em;
     border: transparent;
+    width: 80px;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     background: white;
     cursor: pointer;
     border-radius: 50%;
@@ -116,14 +116,13 @@ button {
 
 label {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .slider-container {
     display: flex;
     align-items: center;
-    margin: 30px;
 }
 
 .slider-container label {
@@ -132,7 +131,45 @@ label {
 
 span{ 
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin: 20px;
+}
+
+.Information{ 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom:-30px;
+    margin-right: 430px;
+}
+
+#Display_chart_one_tooltip-container{ 
+    box-sizing: border-box;
+    border-radius: 10px; 
+    border: 1px solid black;
+    padding: 20px; 
+    margin: 50px; 
+    width: 300px;
+    height: 200px;
+}
+
+#Display_chart_two_tooltip-container{ 
+    margin-left: 580px; 
+    box-sizing: border-box;
+    border-radius: 10px; 
+    border: 1px solid black;
+    padding: 20px; 
+    width: 300px;
+    height: 200px;
+}
+
+#selectedChart{ 
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    align-items: left;
+    margin-left: -10px;
+
 }
