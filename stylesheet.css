@@ -2,16 +2,13 @@
 .chart_one circle{
     fill: dodgerblue; 
 }
-
 .chart_two circle {
     fill: darkcyan; 
 }
-
 .chart_one line,
 .chart_two line {
     stroke: lightgrey;
 }
-
 .chart_one text,
 .chart_two text {
     text-anchor: middle;
@@ -19,7 +16,6 @@
     font-size: 15px;
     font-weight: bold;
 }
-
 .chart_two text,
 .chart_one text {
     fill: black;
@@ -28,25 +24,21 @@
     font-weight: bold;
     margin: 20px;
 }
-
 .Container {
     display: flex;
     margin-bottom: -100px;
 }
-
 .chart_one,
 .chart_two {
     flex: 1;
     margin: 20px;
 }
-
 h1 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
     margin: 20px;
 }
-
 .ControlPanel {
     display: flex;
     justify-content: center;
@@ -54,26 +46,21 @@ h1 {
     margin: 20px;
     flex-direction: column; 
 }
-
 h2 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
-
 .ControlPanel {
     margin-bottom: 15px;
     margin-top: -50px
 }
-
 .ControlPanel h2 {
     margin-bottom: 10px;
 }
-
 .ControlPanel button {
     margin-right: 10px;
 }
-
 button {
     font-size: 13px;
     background: dodgerblue;
@@ -91,7 +78,6 @@ button {
    button:active {
     transform: translate(0em, 0.2em);
    }
-
 .slider {
     -webkit-appearance: none;
     appearance: none;

@@ -1,3 +1,8 @@
+// ------------------- UPDATE CHART -------------------- //
+
+function updateChart(chartSelector, dataURL, centerPos,linkedChartSelector) {
+    createChart(chartSelector, dataURL, centerPos, linkedChartSelector);
+}
 
 function createChart(chartSelector, dataURL, centerPos,linkedChartSelector) {
   
@@ -101,14 +106,12 @@ function createChart(chartSelector, dataURL, centerPos,linkedChartSelector) {
         tooltip2.select("#tooltip-value-2").text("Characters value: ");
     }
     
-    // Initialize mouseover event handlers for nodes
     function mouseOverNodes(selector) {
         d3.select(selector).selectAll('.nodes g')
             .on('mouseover', (event, d) => handleMouseOver(event, d, selector, linkedChartSelector, nodes))
             .on('mouseout', (event, d) => handleMouseOut(event, d, selector));
     }
-    
-    // Initialize mouseover event handlers for both charts
+
     mouseOverNodes(chartSelector);
 
 
@@ -167,7 +170,7 @@ function createChart(chartSelector, dataURL, centerPos,linkedChartSelector) {
     }
 }
 
-  // ----------------- CHANGE GRAPH FUNCTION ----------------- //
+  // ----------------- TOGGLE GRAPH FUNCTION ----------------- //
   var currentChart = '.chart_one';
 
   function toggleChart() {
@@ -179,6 +182,6 @@ function createChart(chartSelector, dataURL, centerPos,linkedChartSelector) {
           document.getElementById('selectedChart').innerText = 'Chart one';
       }
 
-      createChart(currentChart, 'default-data.json', [250, 200], '.chart_two');
+      updateChart(currentChart, 'default-data.json', [250, 200], '.chart_two');
   }
   
